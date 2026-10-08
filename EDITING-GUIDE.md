@@ -35,3 +35,15 @@ The site has not been published. A deployment workflow can be added after conten
 Edit name, brandSubtitle, topics, headline, headlineAccent, portraitCaption, and portraitCaptionDetail in content/profile.md. Your introduction remains the Markdown paragraph below the settings. Other section copy still lives in page components.
 
 Theme colors and the font stack are grouped at the top of src/styles/global.css. The new theme uses slate blue, charcoal, cool white, and local system sans-serif fonts.
+
+## Homepage sections and timeline
+
+In content/home.md, set showHero, showFocus, or showTimeline to false to hide that section. The old connected-practice section and separate experience page were removed. Section components live in src/components/.
+
+Education entries live in content/education/. Experience entries remain in content/experiences/. Dates are displayed verbatim; startYear and endYear place entries in the shared timeline, anchored at endYear (the current year for ongoing roles). Heights follow content, not duration. relatedProjects is a list of project filenames without .md, such as ["uvm-survey"]. Links and return links are generated from this relationship.
+
+## Selected Work
+
+Each project has year, tags, image, imageAlt, and placeholder fields. Use /uploads/... paths for images. With image empty, a labeled placeholder is shown. Multiple selected filters require all selected tags. Newest/oldest sorting uses year; shuffle changes the display order. All entry points use the same /research/project-slug/ page.
+
+Navigation and footer wording live in content/site.md. Library title and introduction live in content/work.md. The Personal page links to the homepage timeline instead of duplicating degree records.

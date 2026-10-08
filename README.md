@@ -1,6 +1,6 @@
 # Nazmus Sakib — personal website
 
-An Astro portfolio with Markdown content, an expandable experience timeline, and modular project pages.
+An Astro portfolio with Markdown content, a combined education/experience timeline and filterable work library, and modular project pages.
 
 See EDITING-GUIDE.md for content and photo updates.
 

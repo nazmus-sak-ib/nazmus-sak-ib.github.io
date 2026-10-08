@@ -1,4 +1,9 @@
 ---
+year: 2026
+tags: ["UVM","Graduate","Coursework","Transportation","Data Analysis"]
+image: ""
+imageAlt: ""
+placeholder: "Modeling & spatial analysis"
 title: "Additional UVM work and coursework"
 summary: "A space for selected projects in charging demand, vehicle adoption, machine learning, and geostatistics."
 status: "details under review"

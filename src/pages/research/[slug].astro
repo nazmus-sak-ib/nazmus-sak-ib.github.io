@@ -3,5 +3,6 @@ import Base from '../../layouts/Base.astro';
 import {items} from '../../lib/content';
 export function getStaticPaths(){return items('projects').map(project=>({params:{slug:project.slug},props:{project}}));}
 const {project}=Astro.props; const {Content,frontmatter:info}=project;
+const contexts=['experiences','education'].flatMap(section=>items(section).filter(r=>(r.frontmatter.relatedProjects??[]).includes(project.slug)).map(r=>({record:r,kind:section==='education'?'education':'experience'})));
 ---
-<Base title={info.title} description={info.summary}><section class="page-head"><a class="text-link" href="/research/">← Selected work</a><p class="eyebrow">{info.status}</p><h1>{info.title}</h1><p>{info.summary}</p>{info.review && <p class="review">Draft note: {info.review}</p>}</section><article class="prose section"><Content/></article></Base>
+<Base title={info.title} description={info.summary}><section class="page-head"><a class="text-link" href="/research/">← Selected work</a><p class="eyebrow">{info.status}</p><h1>{info.title}</h1><p>{info.summary}</p>{info.review && <p class="review">Draft note: {info.review}</p>}</section><article class="prose section">{info.image && <img class="project-image" src={info.image} alt={info.imageAlt??''}/>}<Content/>{contexts.length>0 && <aside class="project-context"><h2>Related education & experience</h2><ul>{contexts.map(({record,kind})=><li><a href={'/#timeline-'+kind+'-'+record.slug}>{record.frontmatter.title} · {record.frontmatter.organization} →</a></li>)}</ul></aside>}</article></Base>

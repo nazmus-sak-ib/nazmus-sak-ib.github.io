@@ -1,5 +1,10 @@
 ---
 title: "Project title"
+year: 2026
+tags: ["Writing"]
+image: ""
+imageAlt: ""
+placeholder: "Project image will go here"
 summary: "This sentence summarizes the project."
 status: "planned"
 featured: false

@@ -1,6 +1,0 @@
----
-import Base from '../layouts/Base.astro';
-import {items} from '../lib/content';
-const roles=items('experiences');
----
-<Base title="Experience"><section class="page-head"><p class="eyebrow">Experience</p><h1>A path across<br/><em>research and practice.</em></h1><p>Explore the responsibilities, questions, and tools behind each role.</p></section><section class="timeline section">{roles.map(role=>{const {Content,frontmatter:r}=role;return <article class="timeline-row"><div class="dates">{r.dates}</div><div class="role"><p class="eyebrow">{r.organization}</p><h2>{r.title}</h2><p>{r.summary}</p><details><summary>Responsibilities & examples</summary><div class="prose"><Content/></div></details></div></article>})}</section></Base>

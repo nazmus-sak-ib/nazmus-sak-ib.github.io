@@ -1,0 +1,5 @@
+---
+import {entry,items} from '../lib/content';
+const home=entry('home').frontmatter; const projects=items('projects').filter(p=>p.frontmatter.featured);
+---
+<section class="section"><div class="section-heading"><div><p class="eyebrow">{home.focusLabel}</p><h2>{home.focusTitle}</h2></div><a class="text-link" href="/research/">All selected work →</a></div>{projects.map(p=><a class="feature" href={'/research/'+p.slug+'/'}><div><span class="badge">{p.frontmatter.status}</span><h3>{p.frontmatter.title}</h3><p>{p.frontmatter.summary}</p><span class="text-link">Explore the project →</span></div><div class="feature-art" aria-hidden="true"><span>People</span><span>Place</span><span>Behavior</span><small>Survey design → Behavioral modeling</small></div></a>)}</section>

@@ -1,6 +1,31 @@
 ---
 import Base from '../../layouts/Base.astro';
-import {items} from '../../lib/content';
-const projects=items('projects');
+import {entry,items} from '../../lib/content';
+const projects=items('projects'); const info=entry('work').frontmatter;
+const tags=[...new Set(projects.flatMap(p=>p.frontmatter.tags??[]))].sort();
+const latest=[...projects].sort((a,b)=>(b.frontmatter.year??0)-(a.frontmatter.year??0));
 ---
-<Base title="Research & selected work"><section class="page-head"><p class="eyebrow">Research & selected work</p><h1>How I approach<br/><em>a question.</em></h1><p>Research design, behavioral analysis, and practical data workflows. Each entry describes my contribution and the current state of the work.</p></section><section class="grid two section">{projects.map(p=><a class="card project-card" href={'/research/'+p.slug+'/'}><span class="badge">{p.frontmatter.status}</span><h2>{p.frontmatter.title}</h2><p>{p.frontmatter.summary}</p><span class="text-link">Read the project →</span></a>)}</section></Base>
+<Base title={info.title}><section class="page-head"><p class="eyebrow">{info.title}</p><h1>{info.title}</h1><p>{info.intro}</p></section><section class="section work-library"><div class="work-controls" hidden><fieldset class="tag-filters"><legend>Filter by topic or context</legend><button type="button" data-tag="" aria-pressed="true">All</button>{tags.map(tag=><button type="button" data-tag={tag} aria-pressed="false">{tag}</button>)}</fieldset><label class="sort-control">Sort <select id="work-sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="shuffle">Shuffle</option></select></label></div><p id="work-count" role="status" aria-live="polite">{projects.length} projects</p><div id="work-grid" class="work-grid">{latest.map(p=><article class="work-card" data-tags={JSON.stringify(p.frontmatter.tags??[])} data-year={p.frontmatter.year??0}><a class="work-card-link" href={'/research/'+p.slug+'/'}>{p.frontmatter.image?<img class="work-thumb" src={p.frontmatter.image} alt={p.frontmatter.imageAlt??''} loading="lazy"/>:<div class="work-thumb thumbnail-placeholder"><span>Image placeholder</span><strong>{p.frontmatter.placeholder??p.frontmatter.title}</strong></div>}<div class="work-card-body"><span class="badge">{p.frontmatter.status}</span><h2>{p.frontmatter.title}</h2><p>{p.frontmatter.summary}</p><div class="work-tags">{(p.frontmatter.tags??[]).map(tag=><span>{tag}</span>)}</div><span class="text-link">View project →</span></div></a></article>)}</div><p id="work-empty" hidden>No projects match these filters. Choose All to reset.</p></section></Base>
+<script>
+const grid=document.querySelector<HTMLDivElement>('#work-grid');
+if(grid){
+ const cards=Array.from(grid.querySelectorAll<HTMLElement>('.work-card'));
+ const buttons=Array.from(document.querySelectorAll<HTMLButtonElement>('[data-tag]'));
+ const selected=new Set<string>();
+ const sort=document.querySelector<HTMLSelectElement>('#work-sort')!;
+ function update(){
+  let ordered=[...cards];
+  if(sort.value==='shuffle'){for(let i=ordered.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[ordered[i],ordered[j]]=[ordered[j],ordered[i]];}}
+  else ordered.sort((a,b)=>(Number(a.dataset.year)-Number(b.dataset.year))*(sort.value==='oldest'?1:-1));
+  let count=0;
+  for(const card of ordered){const tags=JSON.parse(card.dataset.tags!);card.hidden=selected.size>0&&![...selected].every(tag=>tags.includes(tag));if(!card.hidden)count++;grid!.append(card);}
+  buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.tag?selected.has(b.dataset.tag):selected.size===0)));
+  document.querySelector('#work-count')!.textContent=count+' of '+cards.length+' projects';
+  (document.querySelector('#work-empty') as HTMLElement).hidden=count>0;
+ }
+ buttons.forEach(b=>b.addEventListener('click',()=>{const tag=b.dataset.tag!;if(!tag)selected.clear();else if(selected.has(tag))selected.delete(tag);else selected.add(tag);update();}));
+ sort.addEventListener('change',update);
+ (document.querySelector('.work-controls') as HTMLElement).hidden=false;
+ update();
+}
+</script>

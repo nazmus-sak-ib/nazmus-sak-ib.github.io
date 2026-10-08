@@ -1,0 +1,6 @@
+---
+import {items} from '../lib/content';
+const {record,kind}=Astro.props; const {Content,frontmatter:r}=record;
+const related=items('projects').filter(p=>(r.relatedProjects??[]).includes(p.slug));
+---
+<article class={'timeline-card '+kind} id={'timeline-'+kind+'-'+record.slug}><span class="entry-kind">{kind==='education'?'Education':'Experience'}</span><p class="entry-dates">{r.dates}</p><h3>{r.title}</h3><p class="entry-org">{r.organization}</p><p>{r.summary}</p><details><summary>Details{related.length?' & related work':''}</summary><div class="prose"><Content/></div>{related.length>0 && <ul class="related-work">{related.map(p=><li><a href={'/research/'+p.slug+'/'}>{p.frontmatter.title} →</a></li>)}</ul>}</details></article>

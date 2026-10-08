@@ -1,5 +1,5 @@
 ---
-title: "Role title"
+title: "Degree title"
 organization: "Organization"
 startYear: 2024
 endYear: 2026

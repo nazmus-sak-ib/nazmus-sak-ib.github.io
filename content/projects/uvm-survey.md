@@ -1,4 +1,9 @@
 ---
+year: 2026
+tags: ["UVM","Graduate","Transportation","Survey Design"]
+image: ""
+imageAlt: ""
+placeholder: "Survey design & behavioral analysis"
 title: "Transportation behavior across rural and urban settings"
 summary: "An ongoing NSF-funded survey project in Vermont and Maine, connecting literature synthesis, instrument design, and behavioral analysis."
 status: "ongoing"

@@ -1,4 +1,7 @@
 ---
+startYear: 2024
+endYear: 2024
+relatedProjects: ["data-automation"]
 title: "Freelance Software Developer & Data Analyst"
 organization: "Independent / Upwork"
 dates: "January – August 2024"

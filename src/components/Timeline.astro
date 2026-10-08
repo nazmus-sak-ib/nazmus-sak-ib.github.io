@@ -1,0 +1,10 @@
+---
+import {entry,items} from '../lib/content';
+import TimelineEntry from './TimelineEntry.astro';
+const home=entry('home').frontmatter; const roles=items('experiences'); const education=items('education');
+const records=[...roles,...education];
+const latest=Math.max(...records.map(r=>r.frontmatter.endYear));
+const earliest=Math.min(...records.map(r=>r.frontmatter.startYear));
+const years=Array.from({length:latest-earliest+1},(_,i)=>latest-i);
+---
+<section id="timeline" class="section"><p class="eyebrow">{home.timelineLabel}</p><h2>{home.timelineTitle}</h2><div class="timeline-headings" aria-hidden="true"><span>Experience</span><span></span><span>Education</span></div><div class="dual-timeline">{years.map(year=>{const work=roles.filter(r=>r.frontmatter.endYear===year); const study=education.filter(r=>r.frontmatter.endYear===year); return <div class={'year-row '+(!work.length&&!study.length?'empty-year':'')}><div class="timeline-side work-side">{work.map(record=><TimelineEntry record={record} kind="experience"/>)}</div><div class="year-marker"><span>{year}</span></div><div class="timeline-side study-side">{study.map(record=><TimelineEntry record={record} kind="education"/>)}</div></div>})}</div></section>

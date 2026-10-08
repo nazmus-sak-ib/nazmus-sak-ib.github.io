@@ -1,4 +1,7 @@
 ---
+startYear: 2022
+endYear: 2023
+relatedProjects: []
 title: "Research Associate"
 organization: "Innovations for Poverty Action · Bangladesh"
 dates: "March 2022 – January 2023"

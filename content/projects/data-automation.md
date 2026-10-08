@@ -1,4 +1,9 @@
 ---
+year: 2024
+tags: ["Freelance","Data Analysis","Automation"]
+image: ""
+imageAlt: ""
+placeholder: "CSV workflows & spreadsheet automation"
 title: "Making data workflows more practical"
 summary: "Selected freelance work with large CSV files, custom applications, and spreadsheet automation."
 status: "retrospective draft"

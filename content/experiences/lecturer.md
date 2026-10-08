@@ -1,4 +1,7 @@
 ---
+startYear: 2021
+endYear: 2022
+relatedProjects: []
 title: "Lecturer, Civil Engineering"
 organization: "Presidency University · Bangladesh"
 dates: "September 2021 – February 2022"
