@@ -1,0 +1,5 @@
+---
+import {entry} from '../lib/content';
+const {Content,frontmatter:info}=entry('background');
+---
+<section class="section background-summary" id="background"><p class="eyebrow">{info.label}</p><h2>{info.title}</h2><div class="background-intro"><Content/></div><div class="background-groups">{info.groups.map(group=><article><h3>{group.title}</h3><p>{group.description}</p><ul class="skill-badges" aria-label={group.title+' skills and tools'}>{group.skills.map(skill=><li>{skill}</li>)}</ul></article>)}</div></section>

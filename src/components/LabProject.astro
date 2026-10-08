@@ -1,0 +1,10 @@
+---
+import {entry} from '../lib/content';
+import Gallery from './Gallery.astro';
+import ProjectTabs from './ProjectTabs.astro';
+const survey=entry('transportation-lab/survey');const Survey=survey.Content;
+const paper=entry('transportation-lab/paper');const Paper=paper.Content;
+const cost=entry('transportation-lab/cost');const Cost=cost.Content;
+const tabs=[['survey','The survey'],['paper','Published paper'],['cost','Total cost analysis']];
+---
+<ProjectTabs tabs={tabs}><section id="panel-survey" data-panel="survey"><article class="prose"><Survey/><p><a href={survey.frontmatter.url} target="_blank" rel="noopener">View the original survey form ↗</a></p></article><Gallery id="lab-survey" images={survey.frontmatter.images} label="Autonomous-vehicle survey screenshots"/></section><section id="panel-paper" data-panel="paper"><article class="prose academic-abstract"><p class="eyebrow">{paper.frontmatter.venue}</p><h2>{paper.frontmatter.title}</h2><p class="abstract-authors">{paper.frontmatter.authors}</p><Paper/></article></section><section id="panel-cost" data-panel="cost"><article class="prose"><p class="eyebrow">{cost.frontmatter.status}</p><h2>{cost.frontmatter.title}</h2><Cost/></article></section></ProjectTabs>

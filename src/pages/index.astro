@@ -3,7 +3,8 @@ import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
 import CurrentFocus from '../components/CurrentFocus.astro';
 import Timeline from '../components/Timeline.astro';
+import BackgroundSummary from '../components/BackgroundSummary.astro';
 import {entry} from '../lib/content';
 const settings=entry('home').frontmatter;
 ---
-<Base title="Home">{settings.showHero && <Hero/>}{settings.showFocus && <CurrentFocus/>}{settings.showTimeline && <Timeline/>}</Base>
+<Base title="Home">{settings.showHero && <Hero/>}{settings.showFocus && <CurrentFocus/>}{settings.showBackground && <BackgroundSummary/>}{settings.showTimeline && <Timeline/>}</Base>

@@ -1,10 +1,11 @@
 ---
 import {entry,items} from '../lib/content';
 import TimelineEntry from './TimelineEntry.astro';
-const home=entry('home').frontmatter; const roles=items('experiences'); const education=items('education');
-const records=[...roles,...education];
-const latest=Math.max(...records.map(r=>r.frontmatter.endYear));
-const earliest=Math.min(...records.map(r=>r.frontmatter.startYear));
-const years=Array.from({length:latest-earliest+1},(_,i)=>latest-i);
+const home=entry('home').frontmatter;const rows=entry('timeline').frontmatter.rows;
+const roles=items('experiences');const degrees=items('education');const community=items('community');
 ---
-<section id="timeline" class="section"><p class="eyebrow">{home.timelineLabel}</p><h2>{home.timelineTitle}</h2><div class="timeline-headings" aria-hidden="true"><span>Experience</span><span></span><span>Education</span></div><div class="dual-timeline">{years.map(year=>{const work=roles.filter(r=>r.frontmatter.endYear===year); const study=education.filter(r=>r.frontmatter.endYear===year); return <div class={'year-row '+(!work.length&&!study.length?'empty-year':'')}><div class="timeline-side work-side">{work.map(record=><TimelineEntry record={record} kind="experience"/>)}</div><div class="year-marker"><span>{year}</span></div><div class="timeline-side study-side">{study.map(record=><TimelineEntry record={record} kind="education"/>)}</div></div>})}</div></section>
+<section id="timeline" class="section"><p class="eyebrow">{home.timelineLabel}</p><div class="timeline-title-row"><h2>{home.timelineTitle}</h2><label class="community-toggle" hidden><input type="checkbox" id="show-community" aria-controls="career-entries"/> Show community & leadership</label></div><div class="timeline-headings" aria-hidden="true"><span>Experience</span><span></span><span>Education</span><span class="community-column" hidden>Community & leadership</span></div><div id="career-entries" class="career-timeline">{rows.map(row=>{const work=roles.find(r=>r.slug===row.experience);const study=degrees.find(r=>r.slug===row.education);const extras=community.filter(r=>(row.community??[]).includes(r.slug));return <div class:list={['career-row',{'compressed-years':row.compressed}]}><div class="career-work">{work && <TimelineEntry record={work} kind="experience"/>}</div><div class="career-marker"><span>{row.label}</span></div><div class="career-education">{study && <TimelineEntry record={study} kind="education"/>}</div><div class="career-community community-column" hidden>{extras.map(record=><TimelineEntry record={record} kind="community"/>)}</div></div>})}</div></section>
+<script>
+const section=document.querySelector<HTMLElement>('#timeline');
+if(section){const toggle=section.querySelector<HTMLInputElement>('#show-community')!;const columns=section.querySelectorAll<HTMLElement>('.community-column');(section.querySelector('.community-toggle') as HTMLElement).hidden=false;toggle.addEventListener('change',()=>{section.classList.toggle('show-community',toggle.checked);columns.forEach(column=>column.hidden=!toggle.checked);});}
+</script>

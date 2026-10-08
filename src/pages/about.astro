@@ -1,6 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
 import {entry} from '../lib/content';
-const {Content}=entry('about');
+const {Content,frontmatter:info}=entry('about');const photos=info.photos??[];
 ---
-<Base title="Personal"><section class="page-head"><p class="eyebrow">Personal</p><h1>Background & interests</h1></section><article class="prose section"><Content/></article></Base>
+<Base title="Personal"><section class="page-head personal-head"><h1>{info.title}</h1><div class="personal-intro"><Content/></div></section><section class="personal-collage" data-photo-collage data-photos={JSON.stringify(photos)} aria-label="Chess, hiking, and biking photographs"><div class="collage-grid">{photos.slice(0,8).map((photo,i)=><figure class={'collage-photo slot-'+i}><img src={photo.src} alt={photo.alt} loading="lazy" draggable="false"/></figure>)}</div><div class="collage-tools"><span>A little of life outside work.</span><button type="button" data-pause hidden aria-pressed="false">Pause photos</button></div></section></Base>
+<script>
+const collage=document.querySelector<HTMLElement>('[data-photo-collage]');
+if(collage){
+ const photos=JSON.parse(collage.dataset.photos!);const images=Array.from(collage.querySelectorAll<HTMLImageElement>('.collage-photo img'));const button=collage.querySelector<HTMLButtonElement>('[data-pause]')!;
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');let paused=reduced.matches;let visible=true;let timer:ReturnType<typeof setInterval>|undefined;let cursor=images.length;let slot=0;
+ function rotate(){if(paused||!visible||document.hidden)return;const used=new Set(images.map(img=>new URL(img.src).pathname));let next=photos[cursor%photos.length];let attempts=0;while(used.has(next.src)&&attempts++<photos.length){cursor++;next=photos[cursor%photos.length];}const img=images[slot%images.length];const preload=new Image();preload.src=next.src;preload.onload=()=>{if(paused)return;img.src=next.src;img.alt=next.alt;img.animate([{opacity:.35},{opacity:1}],{duration:650,easing:'ease-out'});};cursor++;slot++;}
+ function sync(){button.textContent=paused?'Resume photos':'Pause photos';button.setAttribute('aria-pressed',String(paused));if(timer)clearInterval(timer);if(!paused)timer=setInterval(rotate,4000);}
+ button.hidden=false;button.addEventListener('click',()=>{paused=!paused;sync();});reduced.addEventListener('change',event=>{paused=event.matches;sync();});
+ new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;}).observe(collage);sync();
+}
+</script>

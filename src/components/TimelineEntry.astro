@@ -1,6 +1,11 @@
 ---
 import {items} from '../lib/content';
 const {record,kind}=Astro.props; const {Content,frontmatter:r}=record;
-const related=items('projects').filter(p=>(r.relatedProjects??[]).includes(p.slug));
+const published=items('projects');
+const related=published.filter(p=>(r.relatedProjects??[]).includes(p.slug));
+const groups=(r.relatedProjectGroups??[]).map(g=>({label:g.label,projects:published.filter(p=>(g.projects??[]).includes(p.slug))})).filter(g=>g.projects.length);
+const grouped=new Set(groups.flatMap(g=>g.projects.map(p=>p.slug)));
+const primary=related.find(p=>p.slug===r.primaryProject);
+const remaining=related.filter(p=>!grouped.has(p.slug)&&p.slug!==r.primaryProject);
 ---
-<article class={'timeline-card '+kind} id={'timeline-'+kind+'-'+record.slug}><span class="entry-kind">{kind==='education'?'Education':'Experience'}</span><p class="entry-dates">{r.dates}</p><h3>{r.title}</h3><p class="entry-org">{r.organization}</p><p>{r.summary}</p><details><summary>Details{related.length?' & related work':''}</summary><div class="prose"><Content/></div>{related.length>0 && <ul class="related-work">{related.map(p=><li><a href={'/research/'+p.slug+'/'}>{p.frontmatter.title} →</a></li>)}</ul>}</details></article>
+<article class:list={['timeline-card',kind,{'compact-card':r.compact}]} id={'timeline-'+kind+'-'+record.slug}><span class="entry-kind">{kind==='education'?'Education':kind==='community'?'Community & leadership':'Experience'}</span><p class="entry-dates">{r.dates}</p><h3>{r.title}</h3>{r.subtitle && <p class="entry-subtitle">{r.subtitle}</p>}<p class="entry-org">{r.organization}</p>{r.summary && <p>{r.summary}</p>}{primary && <a class="timeline-primary" href={'/research/'+primary.slug+'/'}>{r.primaryProjectLabel??primary.frontmatter.title}</a>}{r.showDetails!==false && <details><summary>Details{related.length?' & related work':''}</summary><div class="prose"><Content/></div>{groups.map(g=><section class="timeline-project-group"><h4>{g.label}</h4><ul class="related-work">{g.projects.map(p=><li><a href={'/research/'+p.slug+'/'}>{p.frontmatter.title} →</a></li>)}</ul></section>)}{remaining.length>0 && r.selectedWorkLabel && <h4 class="timeline-work-label">{r.selectedWorkLabel}</h4>}{remaining.length>0 && <ul class="related-work">{remaining.map(p=><li><a href={'/research/'+p.slug+'/'}>{p.frontmatter.title} →</a></li>)}</ul>}</details>}</article>

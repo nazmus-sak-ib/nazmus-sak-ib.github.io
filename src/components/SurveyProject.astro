@@ -1,0 +1,15 @@
+---
+import {entry,items} from '../lib/content';
+import Gallery from './Gallery.astro';
+import ProjectTabs from './ProjectTabs.astro';
+const {project}=Astro.props; const {Content}=project;
+const materials=entry('survey/materials').frontmatter;
+const abstract=entry('survey/abstract');const Abstract=abstract.Content;
+const presentations=items('survey-presentations');
+const tabs=[['overview','Overview'],['materials','Materials'],['presentations','Presentations'],['abstract','Abstract']];
+---
+<ProjectTabs tabs={tabs}>
+<section id="panel-overview" data-panel="overview"><article class="prose"><Content/></article></section>
+<section id="panel-materials" data-panel="materials"><h2>Framework & sample</h2><p class="panel-intro">The diagrams behind the survey, followed by the geographic distribution of responses.</p><Gallery id="framework" images={materials.framework} label="Framework and sample"/><h2>Inside the questionnaire</h2><p class="panel-intro">A few blank survey screens: the introduction, policy views, and practical vehicle fit.</p><Gallery id="instrument" images={materials.instrument} label="Survey questionnaire"/></section>
+<section id="panel-presentations" data-panel="presentations"><h2>Sharing the work</h2>{presentations.map(p=>{const EventContent=p.Content;const event=p.frontmatter;return <article class="presentation-entry"><div class="presentation-heading"><h3>{event.title}</h3><span class="badge">{event.status}</span></div><p class="event-date">{event.date}</p><div class="prose"><EventContent/></div><Gallery id={p.slug} images={event.images} label={event.title+' photos and materials'}/><div class="event-links"><a href={event.url} target="_blank" rel="noopener">{p.slug==='graduate-seminar'?'Seminar post':'Event page'} ↗</a>{event.poster && <a href={event.poster} target="_blank" rel="noopener">View poster PDF ↗</a>}</div></article>})}</section>
+<section id="panel-abstract" data-panel="abstract"><article class="prose academic-abstract"><h2>{abstract.frontmatter.title}</h2><p class="abstract-authors">{abstract.frontmatter.authors}</p><Abstract/></article></section></ProjectTabs>

@@ -4,3 +4,28 @@ dist/
 .env
 .env.*
 private-inputs/
+
+# Private source materials; only curated presentation assets are public
+/GIS Project - raw/
+/JS project/
+
+/ann - raw/
+
+/bayes raw/
+
+/planning raw/
+
+/krigging raw/
+
+/survey raw/
+
+/transp lab raw/
+
+/mds raw/
+
+/buet ug raw/
+
+/hobby raw/
+
+# Consolidated private source folder
+/raw stuff/

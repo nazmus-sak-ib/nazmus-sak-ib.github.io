@@ -1,11 +1,9 @@
 # Nazmus Sakib — personal website
 
-An Astro portfolio with Markdown content, a combined education/experience timeline and filterable work library, and modular project pages.
+Astro website with editable Markdown content, project galleries, and an education/experience timeline.
 
 See EDITING-GUIDE.md for content and photo updates.
 
-Commands: npm install, npm run dev, npm run build, npm run preview.
+Commands: npm ci, npm run dev, npm run build, npm run preview.
 
-Source writing lives in content/. Public assets live in public/uploads/. Layouts and styling live in src/. Templates for future additions live in templates/.
-
-This is an unpublished first draft. Placeholder and review notes are intentional.
+GitHub Actions deploys main to https://nazmus-sak-ib.github.io/ once Pages is configured to use Actions. Private source materials in raw folders are ignored.

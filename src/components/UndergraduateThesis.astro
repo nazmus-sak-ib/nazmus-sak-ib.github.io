@@ -1,0 +1,8 @@
+---
+import {entry} from '../lib/content';
+import ProjectTabs from './ProjectTabs.astro';
+import Gallery from './Gallery.astro';
+const sections=['overview','methods','results','abstract'].map(id=>({id,record:entry('undergraduate-thesis/'+id)}));
+const tabs=[['overview','Overview'],['methods','Methods'],['results','Results'],['abstract','Abstract']];
+---
+<ProjectTabs tabs={tabs}>{sections.map(({id,record})=>{const Content=record.Content;return <section id={'panel-'+id} data-panel={id}><article class="prose">{id==='abstract' && <><h2>{record.frontmatter.title}</h2><p>{record.frontmatter.authors}</p></>}<Content/></article>{record.frontmatter.images && <Gallery id="undergraduate-results" label="Undergraduate thesis results" images={record.frontmatter.images}/>}</section>})}</ProjectTabs>

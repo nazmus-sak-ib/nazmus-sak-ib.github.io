@@ -10,5 +10,5 @@ const nav=settings.navigation;
 <a class="skip" href="#main">Skip to content</a>
 <header class="header"><a class="brand" href="/">{profile.name}<span>{profile.brandSubtitle}</span></a><nav aria-label="Main navigation">{nav.map(({href,label})=><a href={href} aria-current={href.includes('#')?undefined:(href==='/'?Astro.url.pathname==='/':Astro.url.pathname.startsWith(href))?'page':undefined}>{label}</a>)}</nav></header>
 <main id="main"><slot/></main>
-<footer id="contact"><div><strong>{settings.footerTitle}</strong><p>{settings.footerText}</p><a href={'mailto:'+profile.email}>{profile.email}</a></div><div class="footer-links"><a href={profile.linkedin}>LinkedIn ↗</a><a href={profile.github}>GitHub ↗</a><span>{settings.location}</span></div><small>{settings.draftNote}</small></footer>
+<footer id="contact"><div><strong>{settings.footerTitle}</strong><p>{settings.footerText}</p><a href={'mailto:'+profile.email}>{profile.email}</a></div><div class="footer-links"><a href={profile.linkedin}>LinkedIn ↗</a><a href={profile.github}>GitHub ↗</a>{profile.researchgate && <a href={profile.researchgate}>ResearchGate ↗</a>}<span>{settings.location}</span></div></footer>
 </body></html>

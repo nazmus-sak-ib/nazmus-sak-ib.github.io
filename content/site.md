@@ -7,5 +7,4 @@ navigation:
 footerTitle: "Let’s connect."
 footerText: "Research questions, collaborations, and opportunities."
 location: "Burlington, Vermont"
-draftNote: "Working draft · Content and project details are being refined."
 ---

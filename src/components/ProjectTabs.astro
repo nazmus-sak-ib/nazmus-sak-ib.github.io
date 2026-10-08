@@ -1,0 +1,14 @@
+---
+const {tabs}=Astro.props;
+---
+<section class="survey-project section" data-project-tabs><div class="project-tabs" aria-label="Project sections" hidden>{tabs.map(([id,label])=><button type="button" id={'tab-'+id} data-tab={id}>{label}</button>)}</div><slot/></section>
+<script>
+document.querySelectorAll<HTMLElement>('[data-project-tabs]').forEach(root=>{
+ const buttons=Array.from(root.querySelectorAll<HTMLButtonElement>('[data-tab]'));
+ const panels=Array.from(root.querySelectorAll<HTMLElement>('[data-panel]'));
+ const list=root.querySelector<HTMLElement>('.project-tabs')!;list.hidden=false;list.setAttribute('role','tablist');
+ function select(index:number,focus=false){buttons.forEach((b,i)=>{b.setAttribute('aria-selected',String(i===index));b.tabIndex=i===index?0:-1;});panels.forEach(p=>p.hidden=p.dataset.panel!==buttons[index].dataset.tab);if(focus)buttons[index].focus();}
+ buttons.forEach((b,i)=>{b.setAttribute('role','tab');b.setAttribute('aria-controls','panel-'+b.dataset.tab);b.addEventListener('click',()=>select(i));b.addEventListener('keydown',event=>{let next=i;if(event.key==='ArrowRight')next=(i+1)%buttons.length;else if(event.key==='ArrowLeft')next=(i-1+buttons.length)%buttons.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=buttons.length-1;else return;event.preventDefault();select(next,true);});});
+ panels.forEach(p=>{p.setAttribute('role','tabpanel');p.setAttribute('aria-labelledby','tab-'+p.dataset.panel);});select(0);
+});
+</script>

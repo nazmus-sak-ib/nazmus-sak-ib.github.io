@@ -18,3 +18,5 @@ This paragraph describes my specific work.
 ## Methods in context
 
 This paragraph connects a method to a task.
+
+<!-- Add sortDate: "YYYY-MM-DD" and dateLabel in frontmatter for precise sorting. -->

@@ -5,12 +5,14 @@ relatedProjects: []
 title: "Research Associate"
 organization: "Innovations for Poverty Action · Bangladesh"
 dates: "March 2022 – January 2023"
-summary: "Survey data collection and statistical analysis across development research projects."
+summary: "Field research and survey-data analysis across development projects."
 order: 3
 draft: false
 ---
-I managed survey data collection and statistical analysis using Stata and SPSS.
+I managed survey fieldwork, trained surveyors, monitored collection, and analyzed data using Stata and SPSS.
 
-Projects included Air Pollution and Labor Productivity, socioeconomic impacts of COVID-19, and Save the Children's Skills to Succeed.
+## Projects
 
-**Placeholder:** This paragraph explains my specific responsibilities on one field-research project.
+[Air pollution research in Dhaka households](https://www.povertyactionlab.org/initiative-project/use-air-purifiers-households-dhaka) · [Skills to Succeed](https://poverty-action.org/youth-employment-and-gender-evaluating-skills-succeed-s2s-program-bangladesh)
+
+Also contributed to research on the socioeconomic effects of COVID-19.

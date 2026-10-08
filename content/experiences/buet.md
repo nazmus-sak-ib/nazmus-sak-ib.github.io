@@ -1,16 +1,14 @@
 ---
 startYear: 2021
 endYear: 2021
-relatedProjects: []
+relatedProjects: ["autonomous-vehicle-bangladesh"]
 title: "Research Assistant — Transportation"
-organization: "BUET · Bangladesh"
+organization: "BUET Transportation Safety & Traffic Behavior Labs"
 dates: "2021"
-summary: "Traffic-behavior and safety research, field data, and statistical analysis."
+summary: "Designed a bilingual autonomous-vehicle perception survey and contributed to infrastructure-readiness research and private-car cost analysis."
 order: 5
 draft: false
 ---
-I conducted traffic-behavior and safety data collection and analysis and contributed to research on mode choice and emerging mobility.
+I designed a bilingual survey on autonomous-vehicle acceptance and willingness to pay, including stated-preference scenarios.
 
-**Review note:** The precise role title and relationship to graduation should be confirmed before publication. The master CV records Graduate Research Assistant.
-
-**Placeholder:** This paragraph describes my contribution to a particular study.
+I also co-authored a conference paper on infrastructure preparedness and worked on a private-car cost study.

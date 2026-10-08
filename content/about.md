@@ -1,20 +1,9 @@
 ---
-title: "About"
+title: "Away from the desk"
+photos: [{"src":"/uploads/personal/photo-01.jpg","alt":"A chess game at a tournament"},{"src":"/uploads/personal/photo-14.jpg","alt":"Friends resting on a rocky summit"},{"src":"/uploads/personal/photo-15.jpg","alt":"A bicycle beside the waterfront"},{"src":"/uploads/personal/photo-04.jpg","alt":"Chess pieces on a tournament board"},{"src":"/uploads/personal/photo-10.jpg","alt":"A waterfall at the end of a walk"},{"src":"/uploads/personal/photo-21.jpg","alt":"Resting beside a wooded stream"},{"src":"/uploads/personal/photo-19.jpg","alt":"A bicycle on a sandy shore"},{"src":"/uploads/personal/photo-09.jpg","alt":"Chess trophies from earlier years"},{"src":"/uploads/personal/photo-02.jpg","alt":"A bicycle ride along a tree-lined path"},{"src":"/uploads/personal/photo-03.jpg","alt":"Taking a break on a snowy hillside"},{"src":"/uploads/personal/photo-05.jpg","alt":"A collection of chess trophies"},{"src":"/uploads/personal/photo-06.jpg","alt":"An evening chess game"},{"src":"/uploads/personal/photo-07.jpg","alt":"A break during a walk outdoors"},{"src":"/uploads/personal/photo-08.jpg","alt":"A chessboard beside lunch"},{"src":"/uploads/personal/photo-11.jpg","alt":"A chess trophy beside a laptop"},{"src":"/uploads/personal/photo-12.jpg","alt":"A well-used chess set"},{"src":"/uploads/personal/photo-13.jpg","alt":"Walking through a green landscape"},{"src":"/uploads/personal/photo-16.jpg","alt":"A bicycle after snowfall"},{"src":"/uploads/personal/photo-17.jpg","alt":"A view from the bicycle handlebars"},{"src":"/uploads/personal/photo-18.jpg","alt":"A bicycle beneath lakeside trees"},{"src":"/uploads/personal/photo-20.jpg","alt":"A bicycle beneath a tree at sunset"},{"src":"/uploads/personal/photo-22.jpg","alt":"A rocky outlook over the mountains"},{"src":"/uploads/personal/photo-23.jpg","alt":"A trail entrance in the woods"},{"src":"/uploads/personal/photo-24.jpg","alt":"A shaded woodland path"}]
 ---
-My background spans civil engineering, development studies, field research, teaching, and freelance software development. I’m interested in how technical methods can help explain people’s choices and the settings in which they make them.
+I like chess, hiking, and biking. I’ve spent years playing chess and organizing around it.
 
-My degrees and dates are listed in the [homepage timeline](/#timeline).
+We might become friends if you love the hyper-accelerated dragon as much as I do.
 
-## Learning across disciplines
-
-My UVM coursework includes transportation planning and demand modeling, spatial analysis for sustainable transportation, applied geostatistics, artificial neural networks, Bayesian statistics, and advanced quantitative methods.
-
-## Beyond work
-
-I play chess and have spent time developing that interest beyond casual play.
-
-**Placeholder:** This paragraph is about my personal background, other hobbies, and the places that shaped me.
-
-## CV
-
-**Placeholder:** A public CV download will appear here once a suitable PDF is provided.
+These days, I’m often happier out on a trail or on my bike (which I call a slightly-accelerated dragon). 

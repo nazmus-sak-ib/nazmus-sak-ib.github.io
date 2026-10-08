@@ -1,11 +1,13 @@
 ---
 showHero: true
 showFocus: true
+showBackground: true
 showTimeline: true
-focusLabel: "Current focus"
+focusLabel: "Current research summary"
 focusTitle: "Understanding how we move."
 timelineLabel: "Education & experience"
 timelineTitle: "My path so far"
-researchButton: "Explore my research"
+researchButton: "Explore my current research"
 experienceButton: "Follow my experience"
+allWorkButton: "All selected work"
 ---
