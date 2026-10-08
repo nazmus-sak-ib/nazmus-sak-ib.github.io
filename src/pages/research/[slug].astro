@@ -1,0 +1,7 @@
+---
+import Base from '../../layouts/Base.astro';
+import {items} from '../../lib/content';
+export function getStaticPaths(){return items('projects').map(project=>({params:{slug:project.slug},props:{project}}));}
+const {project}=Astro.props; const {Content,frontmatter:info}=project;
+---
+<Base title={info.title} description={info.summary}><section class="page-head"><a class="text-link" href="/research/">← Selected work</a><p class="eyebrow">{info.status}</p><h1>{info.title}</h1><p>{info.summary}</p>{info.review && <p class="review">Draft note: {info.review}</p>}</section><article class="prose section"><Content/></article></Base>

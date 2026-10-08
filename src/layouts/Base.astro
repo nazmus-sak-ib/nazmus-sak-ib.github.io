@@ -1,0 +1,13 @@
+---
+import '../styles/global.css';
+import { entry } from '../lib/content';
+const {title='Nazmus Sakib', description='Research, transportation, and practical computational work.'}=Astro.props;
+const profile = entry('profile').frontmatter;
+const nav=[['/','Home'],['/research/','Research'],['/experience/','Experience'],['/about/','About']];
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width"/><meta name="description" content={description}/><title>{title} · Nazmus Sakib</title><link rel="icon" href="/favicon.svg"/></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header"><a class="brand" href="/">{profile.name}<span>{profile.brandSubtitle}</span></a><nav aria-label="Main navigation">{nav.map(([url,label])=><a href={url} aria-current={Astro.url.pathname===url?'page':undefined}>{label}</a>)}</nav></header>
+<main id="main"><slot/></main>
+<footer><div><strong>Let’s connect.</strong><p>Research questions, collaborations, and opportunities.</p><a href={'mailto:'+profile.email}>{profile.email}</a></div><div class="footer-links"><a href={profile.linkedin}>LinkedIn ↗</a><a href={profile.github}>GitHub ↗</a><span>Burlington, Vermont</span></div><small>Working draft · Content and project details are being refined.</small></footer>
+</body></html>

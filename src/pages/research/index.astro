@@ -1,0 +1,6 @@
+---
+import Base from '../../layouts/Base.astro';
+import {items} from '../../lib/content';
+const projects=items('projects');
+---
+<Base title="Research & selected work"><section class="page-head"><p class="eyebrow">Research & selected work</p><h1>How I approach<br/><em>a question.</em></h1><p>Research design, behavioral analysis, and practical data workflows. Each entry describes my contribution and the current state of the work.</p></section><section class="grid two section">{projects.map(p=><a class="card project-card" href={'/research/'+p.slug+'/'}><span class="badge">{p.frontmatter.status}</span><h2>{p.frontmatter.title}</h2><p>{p.frontmatter.summary}</p><span class="text-link">Read the project →</span></a>)}</section></Base>
