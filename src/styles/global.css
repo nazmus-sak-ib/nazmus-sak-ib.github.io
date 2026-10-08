@@ -293,3 +293,23 @@ footer { margin-top:28px; }
 .collage-tools button:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
 @media(max-width:760px) { main > .hero { padding-top:38px; padding-bottom:36px; } .collage-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; } .collage-photo img { height:130px; } .collage-photo:nth-child(3n) img { height:150px; } .collage-photo:nth-child(4n) img { height:115px; } }
 @media(prefers-reduced-motion:reduce){ .collage-photo { transform:none!important; } }
+
+/* Original essay: separated bibliography entries and linked footnotes. */
+.archival-text h2[id$="references"] ~ p { margin:0 0 18px; padding-left:20px; text-indent:-20px; font-size:14px; }
+.archival-text .footnotes { border-top:1px solid var(--line); margin-top:28px; padding-top:16px; font-size:13px; }
+.archival-text .footnotes li { margin-bottom:14px; }
+.archival-text sup a { text-decoration:none; }
+
+/* Consistent project-page spacing, scoped away from the homepage. */
+.project-page > .page-head { padding:32px 0 22px; }
+.project-page > .page-head h1 { font-size:clamp(30px,3.7vw,44px); line-height:1.2; margin:0 0 16px; }
+.project-page > .page-head .eyebrow { margin:16px 0 12px; }
+.project-page > .page-head > p:not(.eyebrow) { margin:0; font-size:16px; }
+.project-page > .prose.section { padding-top:24px; }
+.project-page .prose > :first-child { margin-top:0; }
+.project-page .prose h2 { margin:28px 0 12px; }
+.project-page .prose h3 { margin:24px 0 10px; }
+.project-page .prose p { margin:0 0 16px; }
+@media(max-width:760px) { .project-page > .page-head { padding-top:26px; padding-bottom:18px; } }
+
+.scenario-section > p.scenario-note { font-size:12px; line-height:1.65; color:var(--muted); max-width:800px; margin:10px 0 18px; }

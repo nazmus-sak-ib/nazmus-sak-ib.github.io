@@ -25,8 +25,6 @@ For a poverty course in my Master of Development Studies, I applied the **Sustai
 
 **Education and livelihood rebuilding.** The second narrative examined investment in education and teaching skills amid limited financial and social resources. It showed how capabilities developed during a difficult period could later support a more stable livelihood.
 
-These summaries omit the pseudonyms and detailed personal circumstances recorded in the assignment.
-
 ## What the exercise showed
 
 Livelihood choices made more sense when considered alongside the resources and constraints behind them. The framework helped distinguish an individual's skills from the institutions, relationships, and shocks affecting what those skills could enable.

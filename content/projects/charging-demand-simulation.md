@@ -16,6 +16,8 @@ spotlight: true
 featured: false
 order: 2
 relatedProjects: ["charging-policy-white-paper"]
+scenarioDefinition: "A vehicle-day means one vehicle’s trips on a day it was driven. Infeasible means it could not finish those trips without fast charging while keeping the model’s 10% battery reserve."
+scenarioExample: "In the winter scenario, 4% means about 4 out of every 100 active vehicle-days needed fast charging to finish their trips. It does not mean 4% of people, vehicles, or annual trips."
 scenarios:
   - { label: "A · Universal home access", assumption: "All households charge at home; standard efficiency.", rate: "1.5%" }
   - { label: "B · No home access", assumption: "No households charge at home; standard efficiency.", rate: "3.8%" }

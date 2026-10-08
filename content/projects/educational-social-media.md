@@ -13,28 +13,16 @@ featured: false
 order: 11
 draft: false
 ---
-## Introduction
+For our Social Communication course, we looked at how people in Bangladesh learn through Facebook and YouTube, and what makes educational content useful, accessible, and trustworthy.
 
-Educational material increasingly reaches people outside classrooms through social media. For this Social Communication course project, our group reviewed how that material is created, presented, and used in Bangladesh, focusing on Facebook and YouTube.
+I worked with **Tasnina Momo, Popy Akter, Nusrat Jahan Mousumi, and Namira Khondaker** on this report, submitted in September 2023.
 
-The report was submitted September 4, 2023, by **Tasnina Momo, Popy Akter, Nusrat Jahan Mousumi, Namira Khondaker, and Nazmus Sakib**. It does not specify individual writing responsibilities.
+## Our approach
 
-## What we examined
+We reviewed published work and examples of educational channels, looking at content formats, audiences, credibility, and the practical demands of creating material. We also considered the digital divide and the opportunities for informal learning and skill development.
 
-- Content formats, distribution channels, audiences, and participation.
-- Credibility, misinformation, digital-access gaps, and creator constraints.
-- Opportunities for skill development and the resources needed to sustain production.
+## What stood out
 
-The report uses literature and examples of educational creators and platforms. It is a **broad review**, rather than a systematically coded sample of posts or a measured evaluation of learning outcomes.
+Popular content is not necessarily good educational content. Access, language, trust, and opportunities to ask questions matter alongside views and engagement. For creators, production costs and changing platform incentives can make sustained educational work difficult.
 
-## Main conclusions
-
-Social platforms can extend access to learning and support interaction, but reach and popularity do not establish educational quality. Content needs to be considered alongside credibility, language, digital access, and the resources available to creators and learners.
-
-The report also highlights the tension between sustained educational work and platform incentives: engagement can help material travel, while algorithm changes, negative interactions, and production costs can make that work harder to maintain.
-
-## My takeaway
-
-This project gave me a way to connect communication and development questions: who can access information, whose knowledge becomes visible, and what conditions make informal learning useful.
-
-Examples and platform descriptions reflect the 2023 report. They are not current audience statistics or claims of verified learning impact.
+The project helped me think about communication as a development question: who gets access to useful knowledge, and whose knowledge gets heard?
