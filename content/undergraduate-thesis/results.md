@@ -4,7 +4,7 @@ images: [{"src":"/uploads/undergraduate-thesis/comfort.png","alt":"Proportion pr
 ---
 ## The short version
 
-- Respondents using air-conditioned services were more likely to prioritize comfort: **86.8%**, compared with **57.85%** among non-air-conditioned users in the reported figure.
+- Respondents using air-conditioned services were more likely to prioritize comfort: **86.8%**, compared with **57.85%** among non-air-conditioned users.
 - Longer travel time reduced the modeled appeal of both services, with a larger negative coefficient for non-air-conditioned buses.
 - Higher income was associated with lower modeled preference for the non-air-conditioned service.
 

@@ -8,7 +8,7 @@ year: 2022
 tags: ["Development Studies", "Coursework", "Article", "Gender & Migration", "Writing"]
 image: ""
 imageAlt: ""
-placeholder: "Gender, livelihoods & displacement"
+placeholder: "Gendered experiences of displacement"
 fullText: "articles/gendered-refugee-experience"
 fullTextExpanded: true
 featured: false

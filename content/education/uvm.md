@@ -5,7 +5,7 @@ dates: "Expected 2026"
 startYear: 2024
 endYear: 2026
 order: 1
-summary: "Working with transportation data through simulation, spatial analysis, and behavioral modeling."
+summary: "Graduate study in transportation, with projects using DMV records, travel surveys, and charging-demand simulations."
 relatedProjects: ["ev-adoption-gis", "ev-adoption-ann", "vehicle-geostatistics", "bayesian-hrv", "charging-demand-simulation", "charging-policy-white-paper"]
 relatedProjectGroups:
   - label: "Vermont DMV data · GIS, neural networks & geostatistics"

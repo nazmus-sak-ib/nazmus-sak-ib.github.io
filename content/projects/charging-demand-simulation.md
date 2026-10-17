@@ -2,7 +2,7 @@
 sortDate: "2026-05-04"
 dateLabel: "May 2026"
 title: "Simulating routine fast-charging demand"
-summary: "A vehicle-day simulation testing how home-charging access, housing, rural travel, and winter shape DC fast-charging need—with a Vermont planning application."
+summary: "I simulated daily vehicle travel under four charging and winter scenarios to estimate fast-charging needs, then adjusted the results for Vermont’s housing mix."
 status: "Final course research paper · May 2026"
 year: 2026
 tags: ["UVM", "Graduate", "Coursework", "Transportation", "Simulation", "Charging Demand", "NEVI", "NHTS Data", "Academic Work"]
@@ -11,7 +11,7 @@ imageAlt: "Four scenario results showing simulated shares of active vehicle-days
 highlights:
   - "6,879 active vehicle-days · NHTS 2022"
   - "Four charging-access & winter scenarios"
-  - "Demand simulation with NEVI planning implications"
+  - "Vermont estimates adjusted for housing mix"
 spotlight: true
 featured: false
 order: 2
@@ -27,7 +27,7 @@ draft: false
 ---
 ## Abstract
 
-Off-corridor fast-charging planning needs to consider how people travel and whether they can charge at home. I constructed active vehicle-days from observed trip diaries, simulated battery depletion and charging under four scenarios, and examined how need varies across rurality and housing groups. The results point to a concentration of vulnerability where longer rural travel coincides with limited residential charging access.
+Off-corridor fast-charging planning needs to consider how people travel and whether they can charge at home. I constructed active vehicle-days from observed trip diaries, simulated battery depletion and charging under four scenarios, and examined how need varies across rurality and housing groups. Fast-charging need was highest among households combining longer rural travel with limited access to charging at home.
 
 This final research paper was completed for **Advanced Transportation Planning and Demand Modeling**, May 4, 2026. It extends the planning questions developed in my earlier NEVI white paper.
 
@@ -52,22 +52,22 @@ Survey-weighted estimates and logistic regression accounted for household cluste
 
 ## Findings
 
-**Removing home access more than doubled simulated routine need:** the share of active vehicle-days infeasible without fast charging rose from **1.5% to 3.8%**. This contrast varies starting charge as well as home-charging opportunities, so it describes a scenario package rather than an isolated causal effect.
+With universal home charging, **1.5%** of active vehicle-days needed fast charging to complete their trips; with no home charging, that rose to **3.8%**. Vehicles also started with different charge levels in these two scenarios, so the increase reflects both assumptions.
 
-**Winter amplified housing-related vulnerability.** Housing-based access produced 2.3% overall infeasibility; the winter scenario raised it to 4.0%. Within the rural constrained-housing segment, the reported rate rose from 9.2% to **23.1%**, although that segment contained only 133 vehicle-days. Rural renters were also a small group, with 82 vehicle-days.
+When home-charging access was assigned by housing type, **2.3%** of active vehicle-days needed fast charging. Lower winter efficiency raised that to **4.0%**. Among rural households with housing-related charging constraints, the rate rose from 9.2% to **23.1%**, although this group contained only 133 vehicle-days. Rural renters were also a small group, with 82 vehicle-days.
 
 ![Scenario results by rurality and housing, highlighting higher simulated need among rural renters and constrained-housing households and its increase under winter conditions.](/uploads/charging-demand/housing-rurality-results.png)
 
-The concentration matters more for planning than the statewide average alone. These small-cell estimates are directional, not precise forecasts.
+The overall percentage hides much higher simulated need in some housing groups. Because those groups contain relatively few observations, their percentages are uncertain.
 
 ## Vermont application and NEVI relevance
 
 I reweighted national housing-segment results using Vermont housing composition from ACS B25032. Under the housing-based scenario, this yielded **2.38%** of active vehicle-days infeasible without fast charging and **3.2 simulated charging events per 100 vehicle-days**.
 
-The application is a **statewide composition adjustment**, not a spatial forecast or recommended station count. It provides a demand-side screening logic for the off-corridor NEVI planning context discussed in the paper: combine travel exposure and residential charging constraints with existing feasibility, traffic, and equity criteria.
+This estimates demand for Vermont’s housing mix at the state level; it does not locate or count charging stations. For planning beyond highway corridors, the results suggest looking at where households have both demanding travel and limited home charging, alongside traffic, equity, and the feasibility of building a station.
 
 ## Limitations and next steps
 
 Single-day diaries omit longer-term variation and rare demanding days. The simulation assumes fast charging is available when required; it does not model station locations, queues, detours, or reliability. Home access is assigned through housing categories, and results depend strongly on starting charge assumptions.
 
-Vermont is not separately identified in the public NHTS data. A next step is to spatialize rurality and housing constraints at tract or hex-grid level before evaluating specific siting priorities.
+Vermont is not separately identified in the public NHTS data. To examine possible station locations, I would next map rurality and housing-related charging constraints using census tracts or a hexagonal grid.

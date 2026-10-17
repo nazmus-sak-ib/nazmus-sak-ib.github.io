@@ -1,12 +1,12 @@
 ---
 label: "Background & skills"
-title: "Transportation, people, and the tools to work with data"
+title: "What I’ve worked on"
 groups:
   - title: "Transportation engineering"
-    description: "I studied passengers’ bus choices for my undergraduate thesis, taught traffic engineering, and simulated charging demand in graduate work. Field studies and roadway analysis connect those experiences."
+    description: "I studied passengers’ bus choices for my undergraduate thesis, taught traffic engineering, and simulated charging demand in graduate work."
     skills: ["PTV VISSIM", "AutoCAD", "MicroStation", "Traffic studies", "Mode-choice modeling"]
   - title: "GIS & transportation data"
-    description: "At UVM, I linked large DMV datasets with housing, roads, and charger access to study vehicle adoption and travel. I used spatial joins, interpolation, and model comparisons to explore those patterns."
+    description: "At UVM, I linked large DMV datasets with housing, roads, and charger access to study vehicle adoption and travel. This included joining vehicle records to geographic data, comparing ownership models, and estimating mileage at locations without observations."
     skills: ["ArcGIS Pro", "QGIS", "Co-kriging", "Demand simulation"]
   - title: "Survey design & field research"
     description: "I designed surveys on EV adoption and autonomous vehicles, and helped develop an intercity bus survey. At IPA, I managed survey fieldwork, trained surveyors, and monitored collection."

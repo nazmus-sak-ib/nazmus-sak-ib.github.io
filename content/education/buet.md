@@ -18,4 +18,4 @@ Traffic flow and capacity, pavement studies, field surveys, and travel-choice mo
 
 ## Software / Skills
 
-Traffic simulation with **VISSIM**; drafting and plan preparation with **AutoCAD and MicroStation**; statistical analysis of transportation data. These tools span my engineering work.
+Traffic simulation with **VISSIM**; drafting and plan preparation with **AutoCAD and MicroStation**; statistical analysis of transportation data.

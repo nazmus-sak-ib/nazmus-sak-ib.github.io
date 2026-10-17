@@ -2,7 +2,7 @@
 sortDate: "2021-12-01"
 dateLabel: "2021"
 title: "Autonomous vehicle preparedness in Bangladesh"
-summary: "Early-career survey design on autonomous-vehicle acceptance, alongside a published infrastructure study and unfinished private-car cost analysis."
+summary: "At BUET’s transportation lab, I designed an autonomous-vehicle acceptance survey, co-authored an infrastructure paper, and worked on a private-car cost study."
 status: "Transportation Safety Lab · 2021"
 year: 2021
 tags: ["BUET", "Transportation", "Survey Design", "Autonomous Vehicles", "Publications", "Academic Work"]

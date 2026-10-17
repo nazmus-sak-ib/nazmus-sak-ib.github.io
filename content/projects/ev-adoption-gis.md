@@ -9,7 +9,7 @@ tags: ["UVM", "Graduate", "Coursework", "Transportation", "GIS", "Data Analysis"
 image: "/uploads/ev-adoption/research-question-1.png"
 imageAlt: "Schematic linking vehicle records with infrastructure, housing, and neighborhood variables for an EV-adoption study."
 highlights:
-  - "GIS integration across multiple spatial scales"
+  - "Spatial joins across parcels and census areas"
   - "~950,000 source vehicle records"
   - "77,907 households retained for analysis"
 relatedProjects: ["ev-adoption-ann", "vehicle-geostatistics"]
@@ -28,20 +28,20 @@ Examine how travel patterns, housing, infrastructure, and rurality relate to ind
 
 ## GIS and data work
 
-I worked from a UVM Transportation Research Center dataset originating from the Vermont DMV, containing nearly **950,000 vehicle-level records**. Filtering and preparation produced a retained sample of **77,907 households**; the source count is not the final modeling sample.
+I worked from a UVM Transportation Research Center dataset originating from the Vermont DMV, containing nearly **950,000 vehicle-level records**. Filtering and preparation produced a retained sample of **77,907 households**.
 
 I integrated vehicle locations with parcel polygons, census geography, public chargers, road conditions, EPA built-environment measures, and rural–urban classifications. The workflow included spatial joins, block-group aggregation, charger counts within an **8 km radius**, and weighted pavement-condition measures. This brought household, parcel, block-group, and census-tract information into a common analytical dataset.
 
 ## Results in brief
 
-Using sequential multinomial logistic models, the presentation reports that **rurality remained statistically significant after contextual controls**. Associations with travel distance, charger access, housing tenure, and job density differed by vehicle category. These are observational associations, not causal effects.
+In sequential multinomial logistic models, **rurality remained statistically significant after accounting for the contextual variables**. Travel distance, charger access, housing tenure, and job density had different associations with ownership across vehicle categories.
 
 ## Limitations
 
-Some contextual measures were proxies, and individual sociodemographic characteristics were unavailable. Filtering records with missing travel-distance information may limit representativeness. The supplied report describes the methods but does not include final coefficient tables; this brief results summary comes from the presentation.
+Individual sociodemographic information was unavailable, so some measures described the surrounding area rather than the household itself. Filtering out records with missing travel distance also narrowed the sample. These gaps limit both how well the sample represents Vermont households and what the models can explain about their choices.
 
 ## Research questions and model structure
 
 ![Conceptual diagram connecting mobility, housing, social context, built environment, EV exposure, infrastructure, and rurality to vehicle adoption through a multinomial logistic model.](/uploads/ev-adoption/research-question-2.png)
 
-The diagram shows how variables from different geographic scales were organized into the model.
+Household vehicle records were linked to parcel-level housing information and neighborhood measures before the ownership models were fitted.

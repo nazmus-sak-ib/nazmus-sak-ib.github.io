@@ -8,25 +8,19 @@ year: 2023
 tags: ["Development Studies", "Coursework", "Qualitative Analysis", "Rural Livelihoods"]
 image: ""
 imageAlt: ""
-placeholder: "Assets, shocks & livelihood choices"
+placeholder: "Two accounts of work and rural life"
 featured: false
 order: 10
 draft: false
 ---
-## The question
+For a poverty course in my Master of Development Studies, I used the **Sustainable Rural Livelihoods framework** to examine two respondents' life histories. I considered how their skills, relationships, land, other resources, and finances changed over time, and how those changes affected their work and household decisions.
 
-How do skills, relationships, resources, and shocks shape the choices people make to sustain a livelihood?
+## Migration and informal work
 
-For a poverty course in my Master of Development Studies, I applied the **Sustainable Rural Livelihoods framework** to two respondents' life narratives. The exercise connected individual events to human, social, natural, physical, and financial capital, and considered how those resources changed over time.
+One account followed movement between rural and urban work, including driving, informal income, family obligations, and agriculture. Social support and income from several kinds of work helped the household manage difficult periods, while rising costs affected the balance between staying in the city and returning to village life.
 
-## Two contrasting paths
+## Education and teaching
 
-**Migration and informal work.** One narrative followed movement between rural and urban work, combining driving, informal income, family obligations, and agricultural resources. It illustrated how social support and diversified work could buffer shocks, while rising costs could change the balance between city and village life.
+The other account concerned investment in education and teaching skills despite limited money and social support. I examined how these skills later supported a more stable livelihood, alongside the constraints that had made the earlier period difficult.
 
-**Education and livelihood rebuilding.** The second narrative examined investment in education and teaching skills amid limited financial and social resources. It showed how capabilities developed during a difficult period could later support a more stable livelihood.
-
-## What the exercise showed
-
-Livelihood choices made more sense when considered alongside the resources and constraints behind them. The framework helped distinguish an individual's skills from the institutions, relationships, and shocks affecting what those skills could enable.
-
-This was a small coursework case analysis, not a representative study or evidence of causal effects. The original interview narratives are not reproduced publicly.
+The original interview narratives are kept private.

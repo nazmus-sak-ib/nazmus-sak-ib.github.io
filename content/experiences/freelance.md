@@ -9,4 +9,4 @@ summary: "Helped clients automate spreadsheets, connect APIs, produce reports, a
 order: 2
 draft: false
 ---
-Excel VBA, Google Apps Script, CSV processing, and Stata—used for client-specific automation, reporting, and data problems.
+Projects included converting Excel VBA tools to Google Apps Script, processing CSV files, and generating reports from invoice data. I also helped with Stata regression work.

@@ -8,6 +8,6 @@ Rural electric vehicle adoption may reflect both practical constraints and diffe
 
 The proposed analysis uses structural equation modeling to assess measurement quality, direct and indirect associations, and rural–urban differences. Measurement invariance is evaluated before group comparisons. The cross-sectional design supports interpretation of associations rather than causal effects.
 
-The intended contribution is to distinguish the practical and social-psychological pathways associated with adoption intention, informing more context-sensitive infrastructure, incentives, and outreach.
+The study asks how much charging and vehicle-use constraints explain adoption intentions, and what values, beliefs, and social norms add to that explanation. Understanding these differences could help identify where infrastructure, incentives, or outreach would address the concerns residents actually have.
 
-*Edited synopsis of the submitted ASTR abstract. That submission describes the study design and analysis plan; it predates the preliminary descriptive results shown in the symposium poster.*
+*Adapted from the submitted ASTR abstract, written before the preliminary survey results were available.*

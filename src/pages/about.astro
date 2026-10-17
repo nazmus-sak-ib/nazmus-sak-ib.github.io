@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import {entry} from '../lib/content';
 const {Content,frontmatter:info}=entry('about');const photos=info.photos??[];
 ---
-<Base title="Personal"><section class="page-head personal-head"><h1>{info.title}</h1><div class="personal-intro"><Content/></div></section><section class="personal-collage" data-photo-collage data-photos={JSON.stringify(photos)} aria-label="Chess, hiking, and biking photographs"><div class="collage-grid">{photos.slice(0,8).map((photo,i)=><figure class={'collage-photo slot-'+i}><img src={photo.src} alt={photo.alt} loading="lazy" draggable="false"/></figure>)}</div><div class="collage-tools"><span>A little of life outside work.</span><button type="button" data-pause hidden aria-pressed="false">Pause photos</button></div></section></Base>
+<Base title="Personal"><section class="page-head personal-head"><h1>{info.title}</h1><div class="personal-intro"><Content/></div></section><section class="personal-collage" data-photo-collage data-photos={JSON.stringify(photos)} aria-label="Chess, hiking, and biking photographs"><div class="collage-grid">{photos.slice(0,8).map((photo,i)=><figure class={'collage-photo slot-'+i}><img src={photo.src} alt={photo.alt} loading="lazy" draggable="false"/></figure>)}</div><div class="collage-tools"><span>Chess, hiking, and biking.</span><button type="button" data-pause hidden aria-pressed="false">Pause photos</button></div></section></Base>
 <script>
 const collage=document.querySelector<HTMLElement>('[data-photo-collage]');
 if(collage){

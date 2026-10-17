@@ -4,10 +4,10 @@ showFocus: true
 showBackground: true
 showTimeline: true
 focusLabel: "Current research summary"
-focusTitle: "Understanding how we move."
+focusTitle: "My thesis on rural EV adoption"
 timelineLabel: "Education & experience"
 timelineTitle: "My path so far"
 researchButton: "Explore my current research"
-experienceButton: "Follow my experience"
+experienceButton: "Education & experience"
 allWorkButton: "All selected work"
 ---

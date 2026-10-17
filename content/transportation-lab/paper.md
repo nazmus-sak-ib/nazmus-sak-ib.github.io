@@ -5,13 +5,11 @@ venue: "ICCSTE 2021 · Published conference paper"
 ---
 ## Abstract synopsis
 
-The study examined infrastructure requirements for connected and autonomous vehicles and compared them with conditions in Bangladesh. A literature review and qualitative evidence synthesis covered signs and markings, pavement, drainage, parking, communications, and service infrastructure. The paper reports analysis of **1,036 photographs from three Dhaka intersections** to assess geometric features, pavement condition, and road markings. It identified potential barriers and proposed improvements requiring further feasibility and economic assessment.
-
-*Condensed from the paper's abstract; this describes the team's study, not a claim that I personally collected every photograph. Conditions refer to the 2021 study.*
+The study examined infrastructure requirements for connected and autonomous vehicles and compared them with conditions in Bangladesh. A literature review and qualitative evidence synthesis covered signs and markings, pavement, drainage, parking, communications, and service infrastructure. We analyzed **1,036 photographs from three Dhaka intersections** to assess geometric features, pavement condition, and road markings. We identified potential barriers and proposed improvements requiring further feasibility and economic assessment.
 
 ## Conclusion
 
-The paper identified maintenance and infrastructure gaps as potential obstacles to introducing connected and autonomous vehicles. Its contribution was an early qualitative baseline, rather than a tested deployment plan.
+The study identified gaps in roadway maintenance and supporting infrastructure that could make connected and autonomous vehicles difficult to introduce in Bangladesh. We recommended addressing those gaps and assessing local feasibility and costs before implementation.
 
 ## Recommendations
 
@@ -19,5 +17,3 @@ The paper identified maintenance and infrastructure gaps as potential obstacles 
 - Improve drainage and explore real-time roadway and incident information.
 - Consider automation requirements in parking and supporting infrastructure.
 - Study local feasibility, costs, traffic conditions, and safety before implementation.
-
-These recommendations summarize the historical paper; they are not presented as current technical standards.

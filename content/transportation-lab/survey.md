@@ -7,12 +7,12 @@ images: [{"src":"/uploads/transportation-lab/survey-1.png","alt":"Introduction a
 
 I designed a survey to explore how people in Bangladesh understood autonomous vehicles, what appealed to them, what worried them, and what they might be willing to pay. The questionnaire combined respondent background, current travel habits, explanations of automation, perceived benefits and concerns, and hypothetical travel choices.
 
-The instrument used **Bangla and English**, including stated-preference material comparing private automated vehicles with exclusive-use and shared automated ride services. It was early practice in turning a broad research question into something a respondent could actually answer.
+The instrument used **Bangla and English**, including stated-preference material comparing private automated vehicles with exclusive-use and shared automated ride services.
 
-**Status:** The survey was designed, but the wider project did not progress to a completed analysis. I am sharing the instrument rather than claiming final findings.
+The questionnaire was completed, but the wider project did not reach the analysis stage.
 
 ## Abstract synopsis
 
 This proposed study examined attitudes toward autonomous vehicles in Dhaka, where heterogeneous traffic and pedestrian-management challenges create a context different from the developed-country settings common in earlier research. A stated-preference questionnaire was designed to capture willingness to adopt and willingness to pay across automation levels, alongside sociodemographic characteristics, travel preferences, and perceptions of self-driving features. Structural equation modeling was envisaged to examine relationships between latent perceptions and adoption or payment intentions.
 
-*Edited synopsis of the original draft abstract. Completed-model and findings claims in that draft have been omitted to reflect the project's unfinished status.*
+*Summary of the proposed study.*

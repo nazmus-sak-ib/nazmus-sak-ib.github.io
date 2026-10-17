@@ -5,7 +5,7 @@ dates: "March 2022 – December 2023"
 startYear: 2022
 endYear: 2023
 order: 2
-summary: "Looking at how livelihoods, public policy, and institutions shape people's opportunities."
+summary: "I studied development alongside my field-research work, with coursework on poverty, gender, livelihoods, and public policy."
 relatedProjects: ["gendered-refugee-experience", "rural-livelihoods", "educational-social-media"]
 draft: false
 selectedWorkLabel: "Selected articles & work"

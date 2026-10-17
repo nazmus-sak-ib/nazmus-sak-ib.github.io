@@ -19,15 +19,15 @@ draft: false
 ---
 ## Objective
 
-Explore how household fleet characteristics, travel, charger access, and neighborhood context predict electric vehicle ownership—and what different modeling approaches reveal about the same problem.
+For this ANN course project, we compared counter-propagation networks, self-organizing maps, and random forests to study EV ownership using household vehicle records, travel, charger access, and neighborhood information.
 
-This ANN-class project was presented jointly by **Binaya Rajbanshi, Nazmus Sakib, and Shekwobagwu Paul Galadima**. The presentation records the team's methods and results; individual task assignments are not specified.
+I worked on this project with **Binaya Rajbanshi and Shekwobagwu Paul Galadima**.
 
 ## Working with a large DMV dataset
 
 The project used Vermont DMV registration data supplied through the UVM Transportation Research Center, transformed into household fleet attributes and combined with contextual information. Inputs included vehicle type and weight class, travel distance, charger proximity, education, income, household size, and regional voting patterns.
 
-The random-forest dataset retained **156,284 households** after dropping missing values from 192,435 initial households. A stricter dataset of **4,758 households** was also documented for the neural-model work. These are different analytical samples, not interchangeable counts.
+The random-forest dataset retained **156,284 households** after dropping missing values from 192,435 initial households. Stricter filtering for the neural-model work produced a smaller sample of **4,758 households**.
 
 ## Methods used
 
@@ -37,11 +37,11 @@ The random-forest dataset retained **156,284 households** after dropping missing
 
 ## Main findings
 
-**Fleet attributes carried most of the random forest's predictive information.** Adding broader contextual predictors produced only a small increase in overall accuracy in the reported feature-group comparison.
+Vehicle-fleet attributes accounted for most of the random forest’s predictive performance. Adding travel, access, and neighborhood information improved overall accuracy only slightly.
 
 **Counter-propagation struggled to separate vehicle-ownership groups.** Robust scaling gave training and testing accuracy around 50%, and increasing the number of prototypes did not resolve the overlap.
 
-**Self-organizing maps provided a visual account of household structure.** The mapped vehicle-category mixtures supported exploratory comparison of clusters rather than a claim of clean, validated separation.
+The self-organizing maps let us compare the mix of vehicle categories across groups of similar households. The groups overlapped, so the maps were more useful for exploring patterns than for separating ownership categories.
 
 ## A closer look at the models
 
@@ -50,7 +50,7 @@ The random-forest dataset retained **156,284 households** after dropping missing
 
 ![Feature-group comparison across 20 iterations, reporting similar overall accuracies for fleet-only and fuller-context random-forest models.](/uploads/ev-adoption-ann/random-forest-comparison.png)
 
-The reported comparison shows why adding more contextual variables did not substantially change overall accuracy for this experiment.
+Across 20 iterations, overall accuracy was similar for the fleet-only model and the model with additional contextual variables.
 
 </details>
 
@@ -59,12 +59,10 @@ The reported comparison shows why adding more contextual variables did not subst
 
 ![Counter-propagation diagnostics showing accuracy by prototype count, RMSE convergence, activation patterns, and confusion matrices under robust scaling.](/uploads/ev-adoption-ann/counterprop-diagnostics.png)
 
-The diagnostics show that convergence did not guarantee useful class separation.
+Training converged, but the confusion matrices still showed difficulty distinguishing the ownership groups.
 
 </details>
 
 ## Limitations
 
 The broad dataset was highly imbalanced: about 96% of retained households were in the conventional-vehicle class. Overall accuracy therefore needs to be read alongside class-specific errors. Early random-forest experiments included leakage-prone variables that were removed in subsequent models. Different filtering rules and samples prevent a simple like-for-like performance ranking across all three approaches.
-
-This was an exploratory course project. The slides do not establish causal effects or independent external validation.

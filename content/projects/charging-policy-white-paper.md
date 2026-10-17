@@ -2,15 +2,15 @@
 sortDate: "2026-03-04"
 dateLabel: "March 2026"
 title: "Improving Vermont fast-charging prioritization"
-summary: "A NEVI white paper recommending more explicit treatment of home-charging constraints, community demand, equity, and procurement feasibility."
+summary: "A white paper on how Vermont could prioritize fast charging for households without home access and evaluate proposals under the NEVI program."
 status: "Policy white paper · March 2026"
 year: 2026
 tags: ["UVM", "Graduate", "Coursework", "Transportation", "NEVI", "Policy", "Writing"]
 image: ""
 imageAlt: ""
-placeholder: "Home access · Community demand · Equity"
+placeholder: "Planning fast charging in Vermont"
 highlights:
-  - "Four actionable planning recommendations"
+  - "Four recommendations for charging priorities"
   - "Priority geographies & proposal evaluation"
 relatedProjects: ["charging-demand-simulation"]
 featured: false
@@ -19,9 +19,9 @@ draft: false
 ---
 ## Synopsis
 
-In this March 4, 2026 white paper, I examined how Vermont's fast-charging prioritization could evolve from corridor coverage toward community needs. I reviewed the planning framework and relevant literature, then developed recommendations around two state levers: defining priority geographies and evaluating proposals within them.
+For this March 4, 2026 white paper, I reviewed Vermont’s charging-planning framework and the literature on households’ charging needs. I focused on two decisions: which areas the state should prioritize beyond highway corridors, and how it should compare station proposals in those areas.
 
-The paper focuses on targeting demand where residential charging is constrained while recognizing that utility and site-host feasibility can prevent deployment even in high-priority areas. Its policy context reflects the documents reviewed at the time of writing.
+Households without reliable home charging may need public stations even where traffic volumes alone would not make a location stand out. Utility connections and the availability of a willing site host can still make those stations difficult to build.
 
 ## Recommendations
 
@@ -30,12 +30,10 @@ The paper focuses on targeting demand where residential charging is constrained 
 3. **Broaden equity measures.** Include dimensions such as income, tenure, vehicle access, and energy burden, calibrated to Vermont's circumstances.
 4. **Make priority-map choices transparent.** Publish index construction, equity weights, and sensitivity tests showing how rankings change under alternative assumptions.
 
-These are proposed improvements, not implemented policy changes or claims of measured deployment effects.
-
 ## How it led to the research paper
 
-The white paper identified a gap between aggregate charging projections and the local household conditions generating demand. I extended that question through a separate vehicle-day simulation of home access, housing, rurality, and winter. The simulation provides empirical scenario evidence; it does not test every recommendation or select station sites.
+The white paper left me with a question about how much home access and housing conditions change the need for fast charging. I examined that in the linked research paper by simulating daily travel under different charging-access and winter assumptions.
 
 ## Further directions
 
-Integrate grid capacity as a graduated feasibility constraint and coordinate fast-charging priorities with home, workplace, and public Level 2 programs.
+Further work could compare locations by the difficulty of connecting them to the grid and examine how home, workplace, and public Level 2 charging would change the need for fast charging.

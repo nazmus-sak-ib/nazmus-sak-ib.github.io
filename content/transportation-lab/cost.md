@@ -14,4 +14,4 @@ The working analysis explored how distance traveled and vehicle price related to
 
 ## Where I left it
 
-This was a half-finished project when I left the lab. The retained drafts contain preliminary calculations, but I have not presented them here as finalized cost estimates. This tab records the research question and analytical approach.
+This was a half-finished project when I left the lab, with preliminary calculations but no final cost estimates.
